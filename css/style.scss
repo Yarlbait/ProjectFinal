@@ -1,0 +1,149 @@
+$font-stack: "Roboto", sans-serif;
+$primary-color: #d32f2f;
+$accent-color: #fbc02d;
+$background-color: #f5f5f5;
+$text-color: #333;
+
+//Mixins
+@mixin flex-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//css
+body
+{
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+main 
+{
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#dice-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2rem;
+    flex-wrap: wrap;
+}
+
+.player-section, .cpu-section
+{
+    flex: 1;
+    min-width: 150px;
+}
+
+.dice-image 
+{
+    width: 100px;
+    height: 100px;
+    border: 3px solid $accent-color;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0.5rem;
+}
+
+.game-message 
+{
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    padding: 1rem;
+}
+
+.button-container
+{
+    margin-top: 1rem;
+}
+
+#roll-button 
+{
+  background-color: $accent-color;
+  color: black;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#roll-button:hover 
+{
+    background-color: darken($accent-color, 10%);
+}
+
+footer 
+{
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+// Media Queries
+
+@media screen and (max-width: 1000px) 
+{
+  .game-message 
+  {
+    font-size: 1.3rem;
+  }
+
+  .dice-image 
+  {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) 
+{
+  #dice-container
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player-section, .cpu-section 
+  {
+    margin-bottom: 1rem;
+  }
+
+  .dice-image 
+  {
+    width: 80px;
+    height: 80px
+  }
+
+  .game-message
+  {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}

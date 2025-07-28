@@ -1,0 +1,108 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #d32f2f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#dice-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.player-section, .cpu-section {
+  flex: 1;
+  min-width: 150px;
+}
+
+.dice-image {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #fbc02d;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.game-message {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d32f2f;
+  padding: 1rem;
+}
+
+.button-container {
+  margin-top: 1rem;
+}
+
+#roll-button {
+  background-color: #fbc02d;
+  color: black;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#roll-button:hover {
+  background-color: rgb(240.4205607477, 172.8738317757, 4.5794392523);
+}
+
+footer {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .game-message {
+    font-size: 1.3rem;
+  }
+  .dice-image {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #dice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .player-section, .cpu-section {
+    margin-bottom: 1rem;
+  }
+  .dice-image {
+    width: 80px;
+    height: 80px;
+  }
+  .game-message {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
