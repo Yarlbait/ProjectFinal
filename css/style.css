@@ -1,108 +1,108 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #333;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
-header {
-  background-color: #d32f2f;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-main {
-  padding: 2rem;
-  max-width: 900px;
+#game-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-#dice-container {
+h1 {
+  font-size: 2.5rem;
+  color: #e53935;
+  margin-bottom: 20px;
+}
+
+#game-board {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
 }
 
-.player-section, .cpu-section {
-  flex: 1;
-  min-width: 150px;
+.player-column {
+  flex: 1 1 30%;
+  min-width: 220px;
+  text-align: center;
 }
-
-.dice-image {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #fbc02d;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 0.5rem;
-}
-
-.game-message {
-  flex: 1;
+.player-column h2 {
   font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.player-column #player-dice,
+.player-column #computer-dice {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.player-column #player-dice img,
+.player-column #computer-dice img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fdd835;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.middle-column {
+  flex: 1 1 40%;
+  min-width: 280px;
+  text-align: center;
+}
+.middle-column #message {
+  font-size: 1.2rem;
+  color: #e53935;
+  margin-bottom: 10px;
   font-weight: bold;
-  color: #d32f2f;
-  padding: 1rem;
+}
+.middle-column #total-score {
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.button-container {
-  margin-top: 1rem;
+.controls {
+  margin-top: 30px;
 }
-
-#roll-button {
-  background-color: #fbc02d;
-  color: black;
+.controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
   border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
   border-radius: 5px;
+  background-color: #e53935;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-#roll-button:hover {
-  background-color: rgb(240.4205607477, 172.8738317757, 4.5794392523);
+.controls button:hover {
+  background-color: rgb(234.8157894737, 101.2894736842, 98.1842105263);
+}
+.controls button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
 }
 
 footer {
-  background-color: #d32f2f;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #777;
 }
 
-@media screen and (max-width: 1000px) {
-  .game-message {
-    font-size: 1.3rem;
-  }
-  .dice-image {
-    width: 90px;
-    height: 90px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #dice-container {
+@media (max-width: 768px) {
+  #game-board {
     flex-direction: column;
     align-items: center;
   }
-  .player-section, .cpu-section {
-    margin-bottom: 1rem;
-  }
-  .dice-image {
-    width: 80px;
-    height: 80px;
-  }
-  .game-message {
-    font-size: 1.2rem;
-    padding: 0.5rem;
+  .player-column,
+  .middle-column {
+    flex: 1 1 100%;
   }
 }

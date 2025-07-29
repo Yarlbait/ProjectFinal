@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Game</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>Dice Game</h1>
-    </header>
+  <div id="game-container">
+    <h1>Dice Game</h1>
 
-    <main>
-        <div id="dice-container">
-            <div class="player-section">
-                <h2>Player</h2>
-                <img id="dice1" class="dice-image" src="img/dice1.png" alt="Player Dice">
-            </div>
+    <div id="game-board">
+      <div class="player-column">
+        <h2>Player</h2>
+        <div id="player-dice"></div>
+      </div>
 
-            <div id="messsage" class="game-message"> Roll to Start!</div>
+       <div class="player-column">
+        <h2>CPU</h2>
+        <div id="computer-dice"></div>
+      </div>
 
-            <div class="cpu-section">
-                <h2>CPU</h2>
-                <img id="dice2" class="dice-image" src="img/dice1.png" alt="CPU Dice">
-            </div>
-        </div>
+      <div class="middle-column">
+        <div id="message">Roll the dice to begin!</div>
+        <div id="total-score">Total Score - Player: 0 | CPU: 0</div>
+      </div>
+    </div>
 
-        <div class="button-container">
-            <button id="roll-button">Roll Dice</button>
-        </div>
-    </main>
+    <div class="controls">
+      <button id="roll-button">Roll Dice</button>
+      <button id="reset-button">Reset Game</button>
+    </div>
 
     <footer>
-        <p>&copy; COMP2132 Final Project 2025 Dice Game. Earl Bate.</p>
+    COMP2132 Final Project 2025 Dice Game. Earl Bate.
     </footer>
+  </div>
 </body>
+</html>
